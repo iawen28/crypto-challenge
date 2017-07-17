@@ -179,7 +179,7 @@ class App extends Component {
     return (
       <div>
         <Card style={{ width: 350, marginLeft: 'auto', marginRight: 'auto', padding: '0px 14px' }}>
-          <CardTitle title="Tovia's Enigma" style={{ marginLeft: -14 }} />
+          <CardTitle title="Enigma Messaging" style={{ marginLeft: -14 }} />
           <CardTitle
             style={{ marginLeft: -14 }}
             avatar={<Avatar title={this.state.sender || 'N'} />}
