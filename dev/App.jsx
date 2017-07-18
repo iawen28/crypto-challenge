@@ -122,10 +122,10 @@ class App extends Component {
     let index;
     // get url endpoint for key
     const url = window.location.href;
-    const arr = url.toString().split('/');
-    const key = arr[arr.length - 1];
+    const arr = url.toString().split('#');
+    const key = arr[1];
     if (key.length !== 5) {
-      this.setState({ message: 'Sender\'s five-character passphrase must be after localhost:3000/' });
+      this.setState({ message: 'Sender\'s five-character passphrase must be after localhost:3000/#' });
       this.handleToggle();
       return;
     }
@@ -179,7 +179,7 @@ class App extends Component {
     return (
       <div>
         <Card style={{ width: 350, marginLeft: 'auto', marginRight: 'auto', padding: '0px 14px' }}>
-          <CardTitle title="Enigma Messaging" style={{ marginLeft: -14 }} />
+          <CardTitle title="Enigma" style={{ marginLeft: -14 }} />
           <CardTitle
             style={{ marginLeft: -14 }}
             avatar={<Avatar title={this.state.sender || 'N'} />}
