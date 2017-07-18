@@ -123,7 +123,7 @@ class App extends Component {
     // get url endpoint for key
     const url = window.location.href;
     const arr = url.toString().split('#');
-    const key = arr[1];
+    const key = arr[arr.length - 1];
     if (key.length !== 5) {
       this.setState({ message: 'Sender\'s five-character passphrase must be after localhost:3000/#' });
       this.handleToggle();
